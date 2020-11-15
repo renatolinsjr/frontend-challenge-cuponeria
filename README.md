@@ -1,44 +1,46 @@
-# ![Cuponeria Pig](https://camo.githubusercontent.com/6f8483710048fe836d3e5d61b6af4290c55aff3901e36963181429ed996bc425/68747470733a2f2f6d656469612e6375706f6e657269612e636f6d2e62722f6375706f6e65726961342f696d6167656e732f696c7573747261636f65732f657874656e73616f2f706f727175696e686f2d6865726f692d657874656e73616f2e676966) Frontend Developer Test - Cuponeria
+# Getting Started with Create React App
 
-This test aims to test the candidate's knowledge regarding the technologies used by the **Cuponeria Frontend Developer Team**.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## References 
+## Available Scripts
 
-- [Layout no Figma](https://www.figma.com/file/CjWJWkhU0eYmwVlUaPs4A0/Cuponeria-Frontend-Challenge?node-id=0%3A1)
-- [API - Fake Store](https://fakestoreapi.com/)
+In the project directory, you can run:
 
-## Instructions
+### `yarn start`
 
-- Fork this repository.
-- Create your own version of this repository, with README instructions and documentation.
-- Commit your workflow, you can check this [article](https://medium.com/@rafael.oliveira/como-escrever-boas-mensagens-de-commit-9f8fe852155a).
-- After you're done, send a pull request to the original repository.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Skills Required
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-- HTML;
-- CSS;
-- Javascript;
-- ReactJS;
-- Responsive layouts.
+### `yarn test`
 
-### Optional Skills (will earn more points if it's correct or lose otherwise)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Typescript;
-- CSS IN JS;
-- Unit Tests;
-- Storybook;
+### `yarn build`
 
-### Project Checklist (we will check it all 👀)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- [ ] You have to use [React Js](https://pt-br.reactjs.org/)	as your framework.
-- [ ] The Product Cards, Featured Cards and Menu Itens must be Reusable Components.
-- [ ] You have to use Grid Layout for the structure of the pages.
-- [ ] You have to use Flexbox for the Components.
-- [ ] All content needs to be consumed through the [Fake Store API](https://fakestoreapi.com/).
-- [ ] The app must be responsive for Web and Mobile but have to look good on all breakpoints like mobile, tablets, laptops, desktops widescreen and desktops ultrawidescreen.
-- [ ] Can we see your UI/UX skills? Surprise us with your best, you can change the layout theme schema the way you want, and please, add microinterations but without using external libs.
-- [ ] Don't repeat yourself. Elements that are logically related must be changed predictably and uniformly and must be sync.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### GLHF (Good Luck and Have Fun!)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
