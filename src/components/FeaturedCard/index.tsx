@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledProductCard = styled.div`
+const StyledFeaturedCard = styled.div`
   width: 252px;
   height: 366px;
 
@@ -68,9 +68,9 @@ const StyledProductCard = styled.div`
   }
 `;
 
-const ProductCard = () => {
+const FeaturedCard = () => {
   return (
-    <StyledProductCard>
+    <StyledFeaturedCard>
       <div>
         <img src="/image/test/imgTest.png" alt="" />
         <span>
@@ -80,8 +80,8 @@ const ProductCard = () => {
       <div>
         <p>Test Text</p>
       </div>
-    </StyledProductCard>
+    </StyledFeaturedCard>
   );
 };
 
-export default ProductCard;
+export default FeaturedCard;
