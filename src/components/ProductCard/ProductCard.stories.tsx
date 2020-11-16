@@ -14,8 +14,8 @@ export default {
 
 const Template: Story<Props> = (args) => <ProductCard {...args} />;
 
-export const Selected = Template.bind({});
-Selected.args = {
+export const Default = Template.bind({});
+Default.args = {
   // selected: true,
   // label: "SHOP",
 };

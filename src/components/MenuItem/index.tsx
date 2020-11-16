@@ -5,7 +5,7 @@ export interface Props {
   selected: boolean;
 }
 
-const StyledMenuItem = styled.div`
+const StyledMenuItem = styled.button`
   height: 51px;
   width: 100px;
   left: 0px;
