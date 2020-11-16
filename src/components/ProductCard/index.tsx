@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+export interface Props {
+ 
+}
+
 const StyledProductCard = styled.div`
   background: rgba(200, 118, 118, 0.2);
   height: 184px;

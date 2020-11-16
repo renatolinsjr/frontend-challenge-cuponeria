@@ -68,6 +68,8 @@ const StyledFeaturedCard = styled.div`
   }
 `;
 
+export interface Props {}
+
 const FeaturedCard = () => {
   return (
     <StyledFeaturedCard>
