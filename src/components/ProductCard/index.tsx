@@ -3,11 +3,13 @@ import styled from "styled-components";
 
 export interface Props {
   detail?: boolean;
+  product?: object;
 }
 
 const StyledProductCard = styled.div`
   background: rgba(200, 118, 118, 0.2);
   height: 184px;
+  width: 100%;
   left: 0px;
   top: 0px;
   border-radius: 10px;
@@ -18,6 +20,7 @@ const StyledProductCard = styled.div`
 
   img {
     margin: 28px 20px;
+    max-width: 250px;
   }
 
   div {
@@ -81,21 +84,31 @@ const StyledProductCard = styled.div`
   }
 `;
 
-const ProductCard = ({ detail = false }) => {
+const ProductCard = ({
+  detail = false,
+  product = { title: "default", image: "default", description: "default" },
+}) => {
   return (
     <StyledProductCard>
-      <img alt="" src="/image/test/ringTest.png" />
+      <img alt="" src={product.image} />
       <div>
         <div>
-          <p>Solid Gold Petite Micropave</p>
+          <p>
+            {detail
+              ? product.title
+              : product.title
+              ? product.title.substring(0, 25)+"..."
+              : ""}
+          </p>
           <span>{detail ? " " : "SHOP"}</span>
         </div>
         <div>
           <p>
-            "Satisfaction Guaranteed. Return or exchange any order within 30
-            days.Designed and sold by Hafeez Center in the United States.
-            Satisfaction Guaranteed. Return or exchange any order within 30
-            days."
+            {detail
+              ? product.description
+              : product.description
+              ? product.description.substring(0, 100)+"..."
+              : ""}
           </p>
         </div>
       </div>

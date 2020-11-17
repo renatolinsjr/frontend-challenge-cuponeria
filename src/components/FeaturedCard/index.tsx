@@ -17,6 +17,11 @@ const StyledFeaturedCard = styled.div`
     justify-content: center;
     align-items: center;
 
+    img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
     span {
       position: absolute;
       right: 10px;
@@ -58,6 +63,7 @@ const StyledFeaturedCard = styled.div`
     align-items: center;
 
     p {
+      margin: auto 1.9rem;
       font-family: Roboto;
       font-style: normal;
       font-weight: bold;
@@ -68,19 +74,23 @@ const StyledFeaturedCard = styled.div`
   }
 `;
 
-export interface Props {}
+export interface Props {
+  featured?: object;
+}
 
-const FeaturedCard = () => {
+const FeaturedCard = ({
+  featured = { title: "default", image: "default", price: "" },
+}) => {
   return (
     <StyledFeaturedCard>
       <div>
-        <img src="/image/test/imgTest.png" alt="" />
+        <img src={featured.image} alt="" />
         <span>
-          <p>Test</p>
+          <p>$ {featured.price}</p>
         </span>
       </div>
       <div>
-        <p>Test Text</p>
+        <p>{featured.title}</p>
       </div>
     </StyledFeaturedCard>
   );

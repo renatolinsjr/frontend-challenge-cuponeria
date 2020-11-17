@@ -47,7 +47,7 @@ function IndexPage() {
       <section className="sectionProductCard">
         <h2>DETALHES</h2>
         <div>
-          <ProductCard detail={true} />
+          {/* <ProductCard detail={true} /> */}
         </div>
       </section>
     </StyledPage>

@@ -4,11 +4,14 @@ import styled from "styled-components";
 export interface Props {
   selected?: boolean;
   detail?: boolean;
+  label?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 const StyledMenuItem = styled.button`
   height: 51px;
-  width: 100px;
+  min-width: 100px;
+  width: 100;
   left: 0px;
   top: 0px;
   border-radius: 10px;
@@ -27,10 +30,15 @@ const StyledMenuItem = styled.button`
   line-height: 19px;
 `;
 
-const MenuItem = ({ selected = false, detail = false }) => {
+const MenuItem = ({
+  selected = false,
+  detail = false,
+  label = "default",
+  onClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {},
+}) => {
   return (
-    <StyledMenuItem selected={selected} detail={detail}>
-      {detail ? "VOLTAR" : " "}
+    <StyledMenuItem selected={selected} detail={detail} onClick={onClick}>
+      {detail ? "VOLTAR" : label}
     </StyledMenuItem>
   );
 };
