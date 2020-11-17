@@ -2,13 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 export interface Props {
- 
+  detail?: boolean;
 }
 
 const StyledProductCard = styled.div`
   background: rgba(200, 118, 118, 0.2);
   height: 184px;
-  width: 659px;
   left: 0px;
   top: 0px;
   border-radius: 10px;
@@ -82,14 +81,14 @@ const StyledProductCard = styled.div`
   }
 `;
 
-const ProductCard = () => {
+const ProductCard = ({ detail = false }) => {
   return (
     <StyledProductCard>
       <img alt="" src="/image/test/ringTest.png" />
       <div>
         <div>
           <p>Solid Gold Petite Micropave</p>
-          <span>SHOP</span>
+          <span>{detail ? " " : "SHOP"}</span>
         </div>
         <div>
           <p>

@@ -37,7 +37,7 @@ const StyledPage = styled.div`
     }
 
     div:nth-child(2) {
-      width: 90%;
+      width: 100%;
       padding: 0.5rem;
       display: flex;
     }

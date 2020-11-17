@@ -1,12 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // imported components
 import ProductCard from "../../components/ProductCard";
-import FeaturedCard from "../../components/FeaturedCard";
 import MenuItem from "../../components/MenuItem";
 
 // styled components
 import StyledPage from "./style";
+
+export interface Props {
+  detailed: boolean;
+}
 
 function IndexPage() {
   return (
@@ -35,22 +39,15 @@ function IndexPage() {
           </span>
         </div>
         <div>
-          <MenuItem selected={true} />
-          <MenuItem />
-          <MenuItem />
+          <Link to="/" style={{ margin: "auto", textDecoration: "unset" }}>
+            <MenuItem detail={true} />
+          </Link>
         </div>
       </header>
       <section className="sectionProductCard">
-        <h2>DISCOVER</h2>
+        <h2>DETALHES</h2>
         <div>
-          <ProductCard />
-          <ProductCard />
-        </div>
-      </section>
-      <section className="sectionFeaturedCard">
-        <h2>FEATURED</h2>
-        <div>
-          <FeaturedCard />
+          <ProductCard detail={true} />
         </div>
       </section>
     </StyledPage>
