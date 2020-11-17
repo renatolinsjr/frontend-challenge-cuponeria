@@ -13,7 +13,7 @@ This test aims to test the candidate's knowledge regarding the technologies used
 
 ## Note
 
-- I didn’t put the carousel on the mobile version because I thought a carousel with 20 items wasn’t good.
+- I didn’t put the carousel on the mobile version because with my tests, a carousel with 20 items wasn’t good cause it was taking too much time to see all products.
 
 - I used Material-ui as my components library because it makes creation very fast and also helps a lot in the responsive part.
 
