@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
 // imported components
 import ProductCard from "../../components/ProductCard";
@@ -10,9 +10,25 @@ import StyledPage from "./style";
 
 export interface Props {
   detailed: boolean;
+  product?: string;
 }
 
 function IndexPage() {
+  const router = useParams();
+  const [product, setProduct] = useState({
+    id: "",
+    title: "default",
+    image: "default",
+    description: "default",
+    price: ""
+  });
+
+  useEffect(() => {
+    fetch(`https://fakestoreapi.com/products/${router.id}`)
+      .then((res) => res.json())
+      .then((json) => setProduct(json));
+  }, []);
+
   return (
     <StyledPage
       style={{
@@ -47,7 +63,7 @@ function IndexPage() {
       <section className="sectionProductCard">
         <h2>DETALHES</h2>
         <div>
-          {/* <ProductCard detail={true} /> */}
+          <ProductCard detail={true} product={product} />
         </div>
       </section>
     </StyledPage>

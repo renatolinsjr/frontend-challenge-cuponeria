@@ -13,7 +13,7 @@ const StyledPage = styled.div`
 
     div:first-child {
       display: flex;
-      margin: 0.5rem 0;
+      margin: 0.5rem 3rem;
 
       img {
         width: 64px;

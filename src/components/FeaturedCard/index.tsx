@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledFeaturedCard = styled.div`
   width: 252px;
@@ -79,16 +80,18 @@ export interface Props {
 }
 
 const FeaturedCard = ({
-  featured = { title: "default", image: "default", price: "" },
+  featured = { id: "", title: "default", image: "default", price: "" },
 }) => {
   return (
     <StyledFeaturedCard>
-      <div>
-        <img src={featured.image} alt="" />
-        <span>
-          <p>$ {featured.price}</p>
-        </span>
-      </div>
+      <Link to={`/${featured.id}`}>
+        <div>
+          <img src={featured.image} alt="" />
+          <span>
+            <p>$ {featured.price}</p>
+          </span>
+        </div>
+      </Link>
       <div>
         <p>{featured.title}</p>
       </div>

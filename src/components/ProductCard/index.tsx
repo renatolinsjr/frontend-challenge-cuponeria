@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export interface Props {
+  id?: string;
   detail?: boolean;
   product?: object;
 }
 
 const StyledProductCard = styled.div`
   background: rgba(200, 118, 118, 0.2);
-  height: 184px;
+  height: ${(props: Props) => (props.detail ? "500px" : "184px")};
   width: 100%;
   left: 0px;
   top: 0px;
@@ -18,9 +20,14 @@ const StyledProductCard = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  img {
-    margin: 28px 20px;
-    max-width: 250px;
+  div.imgContainer {
+    width: ${(props: Props) => (props.detail ? "50%" : "unset")};
+
+    img {
+      margin: ${(props: Props) => (props.detail ? "auto" : "28px 20px")};
+      max-width: ${(props: Props) => (props.detail ? "500px" : "250px")};
+      height: ${(props: Props) => (props.detail ? "346px" : "70%")};
+    }
   }
 
   div {
@@ -38,32 +45,41 @@ const StyledProductCard = styled.div`
         font-family: Roboto;
         font-style: normal;
         font-weight: bold;
-        font-size: 22px;
-        line-height: 26px;
+        font-size: ${(props: Props) => (props.detail ? "30px" : "22px")};
+        line-height: ${(props: Props) => (props.detail ? "35px" : "26px")};
       }
 
-      span {
+      div {
+        margin: 0 0 14px 18px;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
 
-        margin: 14px 12px;
-        height: 51px;
-        width: 121px;
-        /* position: relative;
-        right: 0px;
-        top: 0px; */
-        border-radius: 10px;
-        background: #ee797e;
-        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.110058);
+        a {
+          text-decoration: unset;
+          margin-right: 0;
+        }
 
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 19px;
-        text-align: center;
-        color: #ffffff;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          height: 51px;
+          width: 121px;
+          border-radius: 10px;
+          background: #ee797e;
+          box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.110058);
+
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: bold;
+          font-size: ${(props: Props) => (props.detail ? "24px" : "16px")};
+          line-height: ${(props: Props) => (props.detail ? "28px" : "19px")};
+          text-align: center;
+          color: #ffffff;
+        }
       }
     }
 
@@ -71,8 +87,8 @@ const StyledProductCard = styled.div`
       font-family: Roboto;
       font-style: normal;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
+      font-size: ${(props: Props) => (props.detail ? "20px" : "14px")};
+      line-height: ${(props: Props) => (props.detail ? "30px" : "17px")};
       /* or 121% */
 
       color: #a8a4a4;
@@ -86,28 +102,47 @@ const StyledProductCard = styled.div`
 
 const ProductCard = ({
   detail = false,
-  product = { title: "default", image: "default", description: "default" },
+  product = {
+    id: "",
+    title: "default",
+    image: "default",
+    description: "default",
+    price: ""
+  },
 }) => {
   return (
-    <StyledProductCard>
-      <img alt="" src={product.image} />
+    <StyledProductCard detail={detail}>
+      <div className="imgContainer">
+        <img alt="" src={product.image} />
+      </div>
+
       <div>
         <div>
           <p>
             {detail
               ? product.title
               : product.title
-              ? product.title.substring(0, 25)+"..."
+              ? product.title.substring(0, 25) + "..."
               : ""}
           </p>
-          <span>{detail ? " " : "SHOP"}</span>
+          {detail ? (
+            <div>
+              <span>R$ {product.price}</span>
+            </div>
+          ) : (
+            <div>
+              <Link to={`/${product.id}`}>
+                <span>SHOP</span>
+              </Link>
+            </div>
+          )}
         </div>
         <div>
           <p>
             {detail
               ? product.description
               : product.description
-              ? product.description.substring(0, 100)+"..."
+              ? product.description.substring(0, 100) + "..."
               : ""}
           </p>
         </div>

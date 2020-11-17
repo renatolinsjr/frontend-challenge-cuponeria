@@ -13,7 +13,7 @@ function App() {
         <Route exact path="/">
           <IndexPage />
         </Route>
-        <Route exact path="/detail">
+        <Route exact path={`/:id`}>
           <DetailPage />
         </Route>
       </Switch>
