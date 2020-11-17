@@ -1,12 +1,13 @@
 import React from "react";
+import "./App.css";
 
-import ProductCard from './components/ProductCard'
+import IndexPage from "./pages/IndexPage";
 
 function App() {
   return (
-    <div className="App" style={{ background: "#F2F2F2" }}>
-      <ProductCard />
-    </div>
+    <>
+      <IndexPage />
+    </>
   );
 }
 
