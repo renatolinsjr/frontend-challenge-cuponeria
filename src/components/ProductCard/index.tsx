@@ -29,7 +29,7 @@ const StyledProductCard = styled.div`
 
     img {
       margin: ${(props: Props) => (props.detail ? "auto" : "28px 20px")};
-      max-width: ${(props: Props) => (props.detail ? "500px" : "250px")};
+      max-width: ${(props: Props) => (props.detail ? "500px" : "200px")};
       height: ${(props: Props) => (props.detail ? "346px" : "70%")};
     }
   }
@@ -93,7 +93,6 @@ const StyledProductCard = styled.div`
       font-weight: 500;
       font-size: ${(props: Props) => (props.detail ? "20px" : "14px")};
       line-height: ${(props: Props) => (props.detail ? "30px" : "17px")};
-      /* or 121% */
 
       color: #a8a4a4;
 
@@ -104,21 +103,22 @@ const StyledProductCard = styled.div`
   }
 
   @media only screen and (max-width: 900px){
-    height: ${(props: Props) => (props.detail ? "100%" : "184px")};
-    flex-direction: ${(props: Props) => (props.detail ? "column" : "row")};
+    height: 100%;
+    flex-direction: column;
 
     div.imgContainer{
+      height: 250px;
       width: ${(props: Props) => (props.detail ? "100%" : "unset")};
       margin: ${(props: Props) => (props.detail ? "2rem auto" : "unset")};
     }
 
     div:first-child{
-      flex-direction: ${(props: Props) => (props.detail ? "column-reverse !important" : "row")};
+      flex-direction: column-reverse !important;
     }
 
     p {
       text-align: center;
-      margin: 2rem auto;
+      margin: ${(props: Props) => (props.detail ? "2rem auto" : "1rem !important")};
     }
 
     div:nth-child(2) > div:nth-child(2){

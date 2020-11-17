@@ -64,10 +64,10 @@ function IndexPage() {
   useEffect(() => {
     var slider = document.getElementById("slider"),
       sliderItems = document.getElementById("slides"),
-      prev = document.getElementById("prev"),
-      next = document.getElementById("next");
+      sliderMenuItem = document.getElementById("sliderMenuItem"),
+      sliderItemsMenuItem = document.getElementById("slidesMenuItem");
 
-    function slide(wrapper, items, prev, next) {
+    function slide(wrapper, items) {
       items.style.left = "0px";
 
       var posX1 = 0,
@@ -77,7 +77,9 @@ function IndexPage() {
         threshold = 100,
         slides = items.getElementsByClassName("slide"),
         slidesLength = slides.length,
-        slideSize = items.getElementsByClassName("slide")[0] ? items.getElementsByClassName("slide")[0].offsetWidth : "252px",
+        slideSize = items.getElementsByClassName("slide")[0]
+          ? items.getElementsByClassName("slide")[0].offsetWidth
+          : "252px",
         index = 0,
         allowShift = true;
 
@@ -175,9 +177,8 @@ function IndexPage() {
       }
     }
 
-    slide(slider, sliderItems, prev, next);
-
-
+    slide(slider, sliderItems);
+    slide(sliderMenuItem, sliderItemsMenuItem);
   });
 
   return (
@@ -206,22 +207,28 @@ function IndexPage() {
           </span>
         </div>
         <div>
-          <MenuItem
-            label={"home"}
-            selected={homeSelected}
-            onClick={() => {
-              handleClickHomeMenuItem();
-            }}
-          />
-          {categories.map((i) => {
-            return (
-              <MenuItem
-                label={i}
-                selected={categoryView === i}
-                onClick={() => handleClickMenuItem(i)}
-              />
-            );
-          })}
+          <div id="sliderMenuItem" className="sliderMenuItem">
+            <div className="wrapperMenuItem">
+              <div id="slidesMenuItem" className="slidesMenuItem">
+                <MenuItem
+                  label={"home"}
+                  selected={homeSelected}
+                  onClick={() => {
+                    handleClickHomeMenuItem();
+                  }}
+                />
+                {categories.map((i) => {
+                  return (
+                    <MenuItem
+                      label={i}
+                      selected={categoryView === i}
+                      onClick={() => handleClickMenuItem(i)}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <section className="sectionProductCard">

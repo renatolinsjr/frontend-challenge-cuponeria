@@ -38,7 +38,7 @@ const StyledPage = styled.div`
       }
     }
 
-    div:nth-child(2) {
+    div:nth-child(2) > div > div > div {
       width: 100%;
       padding: 0.5rem;
       margin: 0.5rem 0;
@@ -58,6 +58,10 @@ const StyledPage = styled.div`
   .sectionProductCard > div {
     display: flex;
     flex-direction: row;
+
+    @media only Screen and (max-width: 900px) {
+      flex-direction: column;
+    }
   }
 
   .sectionProductCard > div > div {
@@ -84,15 +88,30 @@ const StyledPage = styled.div`
     height: $slider-height;
   }
 
+  .sliderMenuItem {
+    position: relative;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
   .wrapper {
     overflow: hidden;
+    margin: 0 !important;
     position: relative;
-    width: $slider-width;
-    height: $slider-height;
+    width: 100% !important;
     z-index: 1;
   }
 
-  .slides {
+  .wrapperMenuItem {
+    overflow: hidden;
+    margin: 0 !important;
+    position: relative;
+    width: 100% !important;
+    z-index: 1;
+  }
+
+  .slides,
+  .slidesItemMenu {
     display: flex;
     position: relative;
     top: 0;
@@ -100,11 +119,13 @@ const StyledPage = styled.div`
     width: 10000px;
   }
 
-  .slides.shifting {
+  .slides.shifting,
+  .slidesItemMenu.shifting {
     transition: left 0.2s ease-out;
   }
 
-  .slide {
+  .slide,
+  .slidesItemMenu {
     width: $slider-width;
     height: $slider-height;
     display: flex;

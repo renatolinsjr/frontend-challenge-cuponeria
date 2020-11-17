@@ -65,7 +65,7 @@ const StyledFeaturedCard = styled.div`
     align-items: center;
 
     p {
-      margin: auto 1.9rem;
+      margin: auto 1rem;
       font-family: Roboto;
       font-style: normal;
       font-weight: bold;
@@ -94,7 +94,7 @@ const FeaturedCard = ({
         </div>
       </Link>
       <div>
-        <p>{featured.title}</p>
+        <p>{featured.title ? featured.title.substring(0, 52) : ""}</p>
       </div>
     </StyledFeaturedCard>
   );
