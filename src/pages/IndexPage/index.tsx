@@ -10,7 +10,23 @@ import StyledPage from "./style";
 
 function IndexPage() {
   return (
-    <StyledPage>
+    <StyledPage
+      style={{
+        width: "100vw",
+        height: "100vh",
+        display: "grid",
+        gridTemplateAreas: `
+        "header     header      header      header"
+        ".          .           .           ."
+        ".          discover    discover    ."
+        ".          .           .           ."
+        ".          featured    featured    ."     
+        `,
+        gridTemplateRows: "6fr 1fr 6fr 2fr 6fr",
+        gridTemplateColumns: "1fr 15fr 15fr 1fr",
+        gridRowGap: 0,
+      }}
+    >
       <header>
         <div>
           <img src="./image/logo.png" alt="Logo Cuponeria" />

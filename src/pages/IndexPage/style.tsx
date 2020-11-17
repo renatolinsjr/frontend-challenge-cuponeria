@@ -9,6 +9,7 @@ const StyledPage = styled.div`
     background: #111111;
     display: flex;
     flex-direction: column;
+    grid-area: header;
 
     div:first-child {
       display: flex;
@@ -45,8 +46,11 @@ const StyledPage = styled.div`
     margin-left: 0.5rem;
   }
 
+  .sectionProductCard {
+    grid-area: discover;
+  }
+
   .sectionProductCard > div {
-    padding: 0.5rem 0;
     display: flex;
     flex-direction: row;
   }
@@ -55,10 +59,14 @@ const StyledPage = styled.div`
     margin: 0.5rem;
   }
 
+  .sectionFeaturedCard { 
+    grid-area: featured;
+  }
+
   .sectionFeaturedCard > div {
-    padding: 0.5rem 0;
     display: flex;
     flex-direction: row;
+    margin-bottom: 2rem;
   }
 
   .sectionFeaturedCard > div > div {
