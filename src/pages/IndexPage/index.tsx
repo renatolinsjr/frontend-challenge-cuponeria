@@ -11,9 +11,10 @@ import StyledPage from "./style";
 
 function IndexPage() {
   const [categories, setCategories] = useState([""]);
-  const [categoryView, setCategoryView] = useState(" ");
+  const [categoryView, setCategoryView] = useState("home");
   const [products, setProducts] = useState([""]);
   const [discover, setDiscover] = useState([""]);
+  const [homeSelected, setHomeSelected] = useState(true);
 
   const setupCategories = (arr) => {
     let tempArr: string[] = [];
@@ -35,21 +36,25 @@ function IndexPage() {
   };
 
   const handleClickMenuItem = (i) => {
-    setCategoryView(i)
+    setCategoryView(i);
+    setHomeSelected(false);
     fetch(`https://fakestoreapi.com/products/category/${i}`)
-            .then(res=>res.json())
-            .then(json=>setProducts(json))
+      .then((res) => res.json())
+      .then((json) => setProducts(json));
+  };
+
+  const handleClickHomeMenuItem = () => {
+    setCategoryView("home");
+    setHomeSelected(true);
+    fetch(`https://fakestoreapi.com/products`)
+      .then((res) => res.json())
+      .then((json) => setProducts(json));
   };
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((res) => {
-        if (categoryView === " ") {
-          setCategoryView(res[0].category);
-        } else {
-          setCategoryView(categoryView);
-        }
         setupCategories(res);
         setProducts(res);
         randomDiscover(res);
@@ -59,7 +64,7 @@ function IndexPage() {
   return (
     <StyledPage
       style={{
-        width: "100vw",
+        maxWidth: "100%",
         height: "100vh",
         display: "grid",
         gridTemplateAreas: `
@@ -82,6 +87,13 @@ function IndexPage() {
           </span>
         </div>
         <div>
+          <MenuItem
+            label={"home"}
+            selected={homeSelected}
+            onClick={() => {
+              handleClickHomeMenuItem();
+            }}
+          />
           {categories.map((i) => {
             return (
               <MenuItem
@@ -106,6 +118,8 @@ function IndexPage() {
         <div>
           {products.map((i: any) => {
             return i.category === categoryView ? (
+              <FeaturedCard featured={i} />
+            ) : categoryView === "home" ? (
               <FeaturedCard featured={i} />
             ) : (
               ""

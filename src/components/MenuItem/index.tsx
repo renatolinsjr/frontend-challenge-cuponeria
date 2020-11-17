@@ -9,6 +9,7 @@ export interface Props {
 }
 
 const StyledMenuItem = styled.button`
+padding: 0 2rem;
   height: 51px;
   min-width: 100px;
   width: 100;

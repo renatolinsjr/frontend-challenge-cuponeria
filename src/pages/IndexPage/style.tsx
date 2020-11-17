@@ -13,7 +13,7 @@ const StyledPage = styled.div`
 
     div:first-child {
       display: flex;
-      margin: 0.5rem 0;
+      margin: 0.5rem 3rem;
 
       img {
         width: 64px;
@@ -37,9 +37,11 @@ const StyledPage = styled.div`
     }
 
     div:nth-child(2) {
-      width: 90%;
+      width: 100%;
       padding: 0.5rem;
+      margin: .5rem 0;
       display: flex;
+      justify-content: space-evenly;
     }
   }
 
