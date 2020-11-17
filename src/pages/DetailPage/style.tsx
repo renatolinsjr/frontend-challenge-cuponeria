@@ -13,7 +13,7 @@ const StyledPage = styled.div`
 
     div:first-child {
       display: flex;
-      margin: 0.5rem 3rem;
+      margin: 2rem 3rem 1rem 3rem;
 
       img {
         width: 64px;
@@ -60,7 +60,7 @@ const StyledPage = styled.div`
     margin: 0.5rem;
   }
 
-  .sectionFeaturedCard { 
+  .sectionFeaturedCard {
     grid-area: featured;
   }
 

@@ -15,6 +15,7 @@ const StyledProductCard = styled.div`
   left: 0px;
   top: 0px;
   border-radius: 10px;
+  margin-bottom: 2rem !important;
 
   display: flex;
   flex-direction: row;
@@ -22,6 +23,9 @@ const StyledProductCard = styled.div`
 
   div.imgContainer {
     width: ${(props: Props) => (props.detail ? "50%" : "unset")};
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
       margin: ${(props: Props) => (props.detail ? "auto" : "28px 20px")};
@@ -33,7 +37,7 @@ const StyledProductCard = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    min-width: 50%;
+    min-width: 40%;
 
     div:first-child {
       width: 100%;
@@ -95,6 +99,31 @@ const StyledProductCard = styled.div`
 
       p {
         margin: auto 27px auto auto;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 900px){
+    height: ${(props: Props) => (props.detail ? "100%" : "184px")};
+    flex-direction: ${(props: Props) => (props.detail ? "column" : "row")};
+
+    div.imgContainer{
+      width: ${(props: Props) => (props.detail ? "100%" : "unset")};
+      margin: ${(props: Props) => (props.detail ? "2rem auto" : "unset")};
+    }
+
+    div:first-child{
+      flex-direction: ${(props: Props) => (props.detail ? "column-reverse !important" : "row")};
+    }
+
+    p {
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    div:nth-child(2) > div:nth-child(2){
+      p{
+        padding-bottom: 2rem;
       }
     }
   }

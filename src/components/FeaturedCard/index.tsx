@@ -10,6 +10,7 @@ const StyledFeaturedCard = styled.div`
     position: relative;
     height: 315px;
     width: 252px;
+    cursor: pointer;
 
     background: #ffffff;
     border-radius: 10px 10px 0px 0px;
@@ -83,7 +84,7 @@ const FeaturedCard = ({
   featured = { id: "", title: "default", image: "default", price: "" },
 }) => {
   return (
-    <StyledFeaturedCard>
+    <StyledFeaturedCard className="slide">
       <Link to={`/${featured.id}`}>
         <div>
           <img src={featured.image} alt="" />
