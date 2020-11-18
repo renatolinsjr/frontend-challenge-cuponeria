@@ -1,5 +1,6 @@
 // .storybook/preview.js
-
+import { addDecorator } from '@storybook/react';
+import { MemoryRouter } from "react-router";
 import { themes } from "@storybook/theming";
 
 export const parameters = {
@@ -8,3 +9,5 @@ export const parameters = {
     theme: themes.dark,
   },
 };
+
+addDecorator(story => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>);

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export interface Props {
   id?: string;
@@ -155,45 +155,43 @@ const ProductCard = ({
   },
 }) => {
   return (
-    <Router>
-      <StyledProductCard detail={detail}>
-        <div className="imgContainer">
-          <img alt="" src={product.image} />
-        </div>
+    <StyledProductCard detail={detail}>
+      <div className="imgContainer">
+        <img alt="" src={product.image} />
+      </div>
 
+      <div>
         <div>
-          <div>
-            <p>
-              {detail
-                ? product.title
-                : product.title
-                ? product.title.substring(0, 25) + "..."
-                : ""}
-            </p>
-            {detail ? (
-              <div>
-                <span>R$ {product.price}</span>
-              </div>
-            ) : (
-              <div>
-                <Link to={`/${product.id}`}>
-                  <span>SHOP</span>
-                </Link>
-              </div>
-            )}
-          </div>
-          <div>
-            <p>
-              {detail
-                ? product.description
-                : product.description
-                ? product.description.substring(0, 90) + "..."
-                : ""}
-            </p>
-          </div>
+          <p>
+            {detail
+              ? product.title
+              : product.title
+              ? product.title.substring(0, 25) + "..."
+              : ""}
+          </p>
+          {detail ? (
+            <div>
+              <span>R$ {product.price}</span>
+            </div>
+          ) : (
+            <div>
+              <Link to={`/${product.id}`}>
+                <span>SHOP</span>
+              </Link>
+            </div>
+          )}
         </div>
-      </StyledProductCard>
-    </Router>
+        <div>
+          <p>
+            {detail
+              ? product.description
+              : product.description
+              ? product.description.substring(0, 90) + "..."
+              : ""}
+          </p>
+        </div>
+      </div>
+    </StyledProductCard>
   );
 };
 

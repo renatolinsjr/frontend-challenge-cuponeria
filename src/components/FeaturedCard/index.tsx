@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export interface Props {
   featured?: {
     id: "";
@@ -97,7 +96,6 @@ const FeaturedCard = ({
   },
 }) => {
   return (
-    <Router>
       <StyledFeaturedCard className="slide">
         <Link to={`/${featured.id}`}>
           <div>
@@ -111,7 +109,6 @@ const FeaturedCard = ({
           <p>{featured.title ? featured.title.substring(0, 52) : ""}</p>
         </div>
       </StyledFeaturedCard>
-    </Router>
   );
 };
 
