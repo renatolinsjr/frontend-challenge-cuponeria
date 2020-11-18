@@ -54,6 +54,7 @@ With this integration it would be possible to do more in-depth CI using visual t
 <div style="display: flex">
     <img src="./readme_assets/testing.png" width="100%"/>
 </div>
+
 ## Components diagrams
 
 Below you can follow the simple architecture used to orchestrate the components and views / pages.
