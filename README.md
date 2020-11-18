@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+# Cuponeria Store for Frontend Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project developed for the frontend challenge using React.js with Typescript, consuming data from the api Fake Store, unit tests with Jest and demonstration of a design system and integration of tests with Storybook.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Overview
 
-### `yarn start`
+The project was built trying to be as close and accurate to the request in the Figma file. For styling, CSS-in-JS was used with the styled-components, two pages were built, one for Index and one for Detail, and 3 main reusable components: FeaturedCard, ProductCard and MenuItem.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It was used for grid layout pages, and for components, flexbox layout. In another scope, tools would be used to prototype faster like the bootstrap, which in this case would be the reactrsap, or else material-ui or others.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<div style="display: flex">
+    <img src="./readme_assets/intro.png" width="100%"/>
+</div>
 
-### `yarn test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+How to Install and Start
+   -  Clone the project to your device with: ```git clone https://github.com/BraianMendes/frontend-challenge-cuponeria.git```
+    -   Navigate into the repository with: ```cd frontend-challenge-cuponeria```
+    -  Install the project's dependencies with your package manager preferably with: ``` npm install ``` or ``` yarn install```
+    - Once installed, you can run the project in your development environment with: ``` npm start ``` or ``` yarn start```
+    - The project will run at the door: http://localhost:3000/
 
-### `yarn build`
+How to test
+   -  You can do unit tests of the project with: ```npm run test``` or ```yarn test```
+    -   Inside your command terminal you can see Jest doing the tests and printing the results.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+How open Storybook
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   -  You can start the Storybook using: ```npm run storybook``` or ```yarn storybook```
+    -   It will then generate a new Storybook-specific frontend where you can track and work with the components, at the door: http://localhost:6006/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## About Storybook
 
-### `yarn eject`
+This tool is essential for the development of a design system for your project or groups of projects of the same entity. There you can view the rendering of each component, in some cases even their behavior within a page or between them. And yet it allows integration of unit tests, snapshot tests, visual tests and more, all integrated with the CI. Allowing: to monitor the evolution of components from commit to commit, how they interact with each other, possible variations and how to use them. It also allows a non-developer designer to follow the visual tests, monitor their approval within the CI, much more visual and friendly tests and a more complete control of their frontend applications.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+In our exercise it was applied to the 3 main components: FeaturedCard, ProductCard and MenuItem. And it allows you to see its rendering and some variations of the components.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<div style="display: flex">
+    <img src="./readme_assets/storybook.png" width="100%"/>
+</div>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## About Testing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The tests can be of the most varied, guaranteeing the quality and correct execution of our code, in addition to improving maintenance and more.
 
-## Learn More
+In our exercise unit tests were applied through Jest, which is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+It was used integrated with the Storybook, taking advantage of the components it renders and testing as a proof of concept without having gone into all its possibilities. Storybook snapshot tests have also been added.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+With this integration it would be possible to do more in-depth CI using visual tests with tools already prepared for Storybook partners, and implement together our own unit tests and others.
+
+<div style="display: flex">
+    <img src="./readme_assets/testing.png" width="100%"/>
+</div>
+## Components diagrams
+
+Below you can follow the simple architecture used to orchestrate the components and views / pages.
+
+```mermaid
+graph LR
+A[FeaturedCard]  --> D{IndexPage}
+B --> F{DetailPage}
+C[MenuItem] --> E((header))
+B[ProductCard] --> D
+E --> D
+E --> F
+
+```
+
+## Final considerations
+
+Thank you very much for watching so far and for the opportunity. I am open to all conversations, doubts and whatever else you want. I hope to see you in a new stage.
