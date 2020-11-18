@@ -1,11 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 export interface Props {
   id?: string;
   detail?: boolean;
-  product?: object;
+  product?: {
+    id: "";
+    title: "Mens Casual Slim Fit";
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg";
+    description: "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.";
+    price: "15.99";
+  };
 }
 
 const StyledProductCard = styled.div`
@@ -103,12 +109,12 @@ const StyledProductCard = styled.div`
     }
   }
 
-  @media only screen and (max-width: 900px){
+  @media only screen and (max-width: 900px) {
     height: 100%;
     width: 100%;
     flex-direction: column;
 
-    div.imgContainer{
+    div.imgContainer {
       height: 250px;
       width: ${(props: Props) => (props.detail ? "100%" : "unset")};
       margin: ${(props: Props) => (props.detail ? "2rem auto" : "unset")};
@@ -119,17 +125,18 @@ const StyledProductCard = styled.div`
       }
     }
 
-    div:first-child{
+    div:first-child {
       flex-direction: column-reverse !important;
     }
 
     p {
       text-align: center;
-      margin: ${(props: Props) => (props.detail ? "2rem auto" : "1rem !important")};
+      margin: ${(props: Props) =>
+        props.detail ? "2rem auto" : "1rem !important"};
     }
 
-    div:nth-child(2) > div:nth-child(2){
-      p{
+    div:nth-child(2) > div:nth-child(2) {
+      p {
         padding-bottom: 2rem;
       }
     }
@@ -140,50 +147,53 @@ const ProductCard = ({
   detail = false,
   product = {
     id: "",
-    title: "default",
-    image: "default",
-    description: "default",
-    price: ""
+    title: "Mens Casual Slim Fit",
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    description:
+      "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+    price: "15.99",
   },
 }) => {
   return (
-    <StyledProductCard detail={detail}>
-      <div className="imgContainer">
-        <img alt="" src={product.image} />
-      </div>
+    <Router>
+      <StyledProductCard detail={detail}>
+        <div className="imgContainer">
+          <img alt="" src={product.image} />
+        </div>
 
-      <div>
         <div>
-          <p>
-            {detail
-              ? product.title
-              : product.title
-              ? product.title.substring(0, 25) + "..."
-              : ""}
-          </p>
-          {detail ? (
-            <div>
-              <span>R$ {product.price}</span>
-            </div>
-          ) : (
-            <div>
-              <Link to={`/${product.id}`}>
-                <span>SHOP</span>
-              </Link>
-            </div>
-          )}
+          <div>
+            <p>
+              {detail
+                ? product.title
+                : product.title
+                ? product.title.substring(0, 25) + "..."
+                : ""}
+            </p>
+            {detail ? (
+              <div>
+                <span>R$ {product.price}</span>
+              </div>
+            ) : (
+              <div>
+                <Link to={`/${product.id}`}>
+                  <span>SHOP</span>
+                </Link>
+              </div>
+            )}
+          </div>
+          <div>
+            <p>
+              {detail
+                ? product.description
+                : product.description
+                ? product.description.substring(0, 90) + "..."
+                : ""}
+            </p>
+          </div>
         </div>
-        <div>
-          <p>
-            {detail
-              ? product.description
-              : product.description
-              ? product.description.substring(0, 90) + "..."
-              : ""}
-          </p>
-        </div>
-      </div>
-    </StyledProductCard>
+      </StyledProductCard>
+    </Router>
   );
 };
 

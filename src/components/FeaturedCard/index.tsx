@@ -1,6 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+
+export interface Props {
+  featured?: {
+    id: "";
+    title: "Mens Casual Slim Fit";
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg";
+    description: "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.";
+    price: "15.99";
+  };
+}
 
 const StyledFeaturedCard = styled.div`
   width: 252px;
@@ -76,27 +86,32 @@ const StyledFeaturedCard = styled.div`
   }
 `;
 
-export interface Props {
-  featured?: object;
-}
-
 const FeaturedCard = ({
-  featured = { id: "", title: "default", image: "default", price: "" },
+  featured = {
+    id: "",
+    title: "Mens Casual Slim Fit",
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    description:
+      "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+    price: "15.99",
+  },
 }) => {
   return (
-    <StyledFeaturedCard className="slide">
-      <Link to={`/${featured.id}`}>
+    <Router>
+      <StyledFeaturedCard className="slide">
+        <Link to={`/${featured.id}`}>
+          <div>
+            <img src={featured.image} alt="" />
+            <span>
+              <p>$ {featured.price}</p>
+            </span>
+          </div>
+        </Link>
         <div>
-          <img src={featured.image} alt="" />
-          <span>
-            <p>$ {featured.price}</p>
-          </span>
+          <p>{featured.title ? featured.title.substring(0, 52) : ""}</p>
         </div>
-      </Link>
-      <div>
-        <p>{featured.title ? featured.title.substring(0, 52) : ""}</p>
-      </div>
-    </StyledFeaturedCard>
+      </StyledFeaturedCard>
+    </Router>
   );
 };
 

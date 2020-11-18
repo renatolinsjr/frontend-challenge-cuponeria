@@ -17,11 +17,17 @@ const Template: Story<Props> = (args) => <MenuItem {...args} />;
 export const Selected = Template.bind({});
 Selected.args = {
   selected: true,
-  // label: "SHOP",
+  label: "Default"
 };
 
 export const Unselected = Template.bind({});
 Unselected.args = {
   selected: false,
-  // label: "SHOP",
+  label: "Default"
+};
+
+export const Detail = Template.bind({});
+Detail.args = {
+  detail: true,
+  label: "VOLTAR"
 };
