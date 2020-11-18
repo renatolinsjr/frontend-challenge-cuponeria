@@ -4,9 +4,9 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import { Default } from './ProductCard.stories';
+import { Discover } from './ProductCard.stories';
 
-it('renders the ProductCard in the default state', () => {
-  render(<Default {...Default.args} />);
-//   expect(screen.getByRole('button')).toHaveTextContent('Primary');
+it('renders the ProductCard in the discover state', () => {
+  render(<Discover {...Discover.args} />);
+  expect(screen.getByText('SHOP')).toHaveTextContent('SHOP');
 });

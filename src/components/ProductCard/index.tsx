@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { MemoryRouter, Link } from "react-router-dom";
 
 export interface Props {
   id?: string;
@@ -175,9 +175,11 @@ const ProductCard = ({
             </div>
           ) : (
             <div>
-              <Link to={`/${product.id}`}>
-                <span>SHOP</span>
-              </Link>
+              <MemoryRouter>
+                <Link to={`/${product.id}`}>
+                  <span>SHOP</span>
+                </Link>
+              </MemoryRouter>
             </div>
           )}
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { MemoryRouter, Link } from "react-router-dom";
 export interface Props {
   featured?: {
     id: "";
@@ -96,7 +96,8 @@ const FeaturedCard = ({
   },
 }) => {
   return (
-      <StyledFeaturedCard className="slide">
+    <StyledFeaturedCard className="slide">
+      <MemoryRouter>
         <Link to={`/${featured.id}`}>
           <div>
             <img src={featured.image} alt="" />
@@ -105,10 +106,11 @@ const FeaturedCard = ({
             </span>
           </div>
         </Link>
-        <div>
-          <p>{featured.title ? featured.title.substring(0, 52) : ""}</p>
-        </div>
-      </StyledFeaturedCard>
+      </MemoryRouter>
+      <div>
+        <p>{featured.title ? featured.title.substring(0, 52) : ""}</p>
+      </div>
+    </StyledFeaturedCard>
   );
 };
 

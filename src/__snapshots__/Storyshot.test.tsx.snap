@@ -1,0 +1,676 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Example/Button Large 1`] = `
+<button
+  className="storybook-button storybook-button--large storybook-button--secondary"
+  style={
+    Object {
+      "backgroundColor": undefined,
+    }
+  }
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Storyshots Example/Button Primary 1`] = `
+<button
+  className="storybook-button storybook-button--medium storybook-button--primary"
+  style={
+    Object {
+      "backgroundColor": undefined,
+    }
+  }
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Storyshots Example/Button Secondary 1`] = `
+<button
+  className="storybook-button storybook-button--medium storybook-button--secondary"
+  style={
+    Object {
+      "backgroundColor": undefined,
+    }
+  }
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Storyshots Example/Button Small 1`] = `
+<button
+  className="storybook-button storybook-button--small storybook-button--secondary"
+  style={
+    Object {
+      "backgroundColor": undefined,
+    }
+  }
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Storyshots Example/Header Logged In 1`] = `
+<header>
+  <div
+    className="wrapper"
+  >
+    <div>
+      <svg
+        height="32"
+        viewBox="0 0 32 32"
+        width="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <path
+            d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
+            fill="#FFF"
+          />
+          <path
+            d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
+            fill="#555AB9"
+          />
+          <path
+            d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
+            fill="#91BAF8"
+          />
+        </g>
+      </svg>
+      <h1>
+        Acme
+      </h1>
+    </div>
+    <div>
+      <button
+        className="storybook-button storybook-button--small storybook-button--secondary"
+        style={
+          Object {
+            "backgroundColor": undefined,
+          }
+        }
+        type="button"
+      >
+        Log out
+      </button>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Storyshots Example/Header Logged Out 1`] = `
+<header>
+  <div
+    className="wrapper"
+  >
+    <div>
+      <svg
+        height="32"
+        viewBox="0 0 32 32"
+        width="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <path
+            d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
+            fill="#FFF"
+          />
+          <path
+            d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
+            fill="#555AB9"
+          />
+          <path
+            d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
+            fill="#91BAF8"
+          />
+        </g>
+      </svg>
+      <h1>
+        Acme
+      </h1>
+    </div>
+    <div>
+      <button
+        className="storybook-button storybook-button--small storybook-button--secondary"
+        style={
+          Object {
+            "backgroundColor": undefined,
+          }
+        }
+        type="button"
+      >
+        Log in
+      </button>
+      <button
+        className="storybook-button storybook-button--small storybook-button--primary"
+        style={
+          Object {
+            "backgroundColor": undefined,
+          }
+        }
+        type="button"
+      >
+        Sign up
+      </button>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Storyshots Example/Page Logged In 1`] = `
+<article>
+  <header>
+    <div
+      className="wrapper"
+    >
+      <div>
+        <svg
+          height="32"
+          viewBox="0 0 32 32"
+          width="32"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+          >
+            <path
+              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
+              fill="#FFF"
+            />
+            <path
+              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
+              fill="#555AB9"
+            />
+            <path
+              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
+              fill="#91BAF8"
+            />
+          </g>
+        </svg>
+        <h1>
+          Acme
+        </h1>
+      </div>
+      <div>
+        <button
+          className="storybook-button storybook-button--small storybook-button--secondary"
+          style={
+            Object {
+              "backgroundColor": undefined,
+            }
+          }
+          type="button"
+        >
+          Log out
+        </button>
+      </div>
+    </div>
+  </header>
+  <section>
+    <h2>
+      Pages in Storybook
+    </h2>
+    <p>
+      We recommend building UIs with a
+       
+      <a
+        href="https://componentdriven.org"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <strong>
+          component-driven
+        </strong>
+      </a>
+       
+      process starting with atomic components and ending with pages.
+    </p>
+    <p>
+      Render pages with mock data. This makes it easy to build and review page states without needing to navigate to them in your app. Here are some handy patterns for managing page data in Storybook:
+    </p>
+    <ul>
+      <li>
+        Use a higher-level connected component. Storybook helps you compose such data from the "args" of child component stories
+      </li>
+      <li>
+        Assemble data in the page component from your services. You can mock these services out using Storybook.
+      </li>
+    </ul>
+    <p>
+      Get a guided tutorial on component-driven development at
+       
+      <a
+        href="https://www.learnstorybook.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Learn Storybook
+      </a>
+      . Read more in the
+       
+      <a
+        href="https://storybook.js.org/docs"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        docs
+      </a>
+      .
+    </p>
+    <div
+      className="tip-wrapper"
+    >
+      <span
+        className="tip"
+      >
+        Tip
+      </span>
+       Adjust the width of the canvas with the
+       
+      <svg
+        height="10"
+        viewBox="0 0 12 12"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <path
+            d="M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z"
+            fill="#999"
+            id="a"
+          />
+        </g>
+      </svg>
+      Viewports addon in the toolbar
+    </div>
+  </section>
+</article>
+`;
+
+exports[`Storyshots Example/Page Logged Out 1`] = `
+<article>
+  <header>
+    <div
+      className="wrapper"
+    >
+      <div>
+        <svg
+          height="32"
+          viewBox="0 0 32 32"
+          width="32"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+          >
+            <path
+              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
+              fill="#FFF"
+            />
+            <path
+              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
+              fill="#555AB9"
+            />
+            <path
+              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
+              fill="#91BAF8"
+            />
+          </g>
+        </svg>
+        <h1>
+          Acme
+        </h1>
+      </div>
+      <div>
+        <button
+          className="storybook-button storybook-button--small storybook-button--secondary"
+          style={
+            Object {
+              "backgroundColor": undefined,
+            }
+          }
+          type="button"
+        >
+          Log in
+        </button>
+        <button
+          className="storybook-button storybook-button--small storybook-button--primary"
+          style={
+            Object {
+              "backgroundColor": undefined,
+            }
+          }
+          type="button"
+        >
+          Sign up
+        </button>
+      </div>
+    </div>
+  </header>
+  <section>
+    <h2>
+      Pages in Storybook
+    </h2>
+    <p>
+      We recommend building UIs with a
+       
+      <a
+        href="https://componentdriven.org"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <strong>
+          component-driven
+        </strong>
+      </a>
+       
+      process starting with atomic components and ending with pages.
+    </p>
+    <p>
+      Render pages with mock data. This makes it easy to build and review page states without needing to navigate to them in your app. Here are some handy patterns for managing page data in Storybook:
+    </p>
+    <ul>
+      <li>
+        Use a higher-level connected component. Storybook helps you compose such data from the "args" of child component stories
+      </li>
+      <li>
+        Assemble data in the page component from your services. You can mock these services out using Storybook.
+      </li>
+    </ul>
+    <p>
+      Get a guided tutorial on component-driven development at
+       
+      <a
+        href="https://www.learnstorybook.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Learn Storybook
+      </a>
+      . Read more in the
+       
+      <a
+        href="https://storybook.js.org/docs"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        docs
+      </a>
+      .
+    </p>
+    <div
+      className="tip-wrapper"
+    >
+      <span
+        className="tip"
+      >
+        Tip
+      </span>
+       Adjust the width of the canvas with the
+       
+      <svg
+        height="10"
+        viewBox="0 0 12 12"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <path
+            d="M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z"
+            fill="#999"
+            id="a"
+          />
+        </g>
+      </svg>
+      Viewports addon in the toolbar
+    </div>
+  </section>
+</article>
+`;
+
+exports[`Storyshots Storybook/FeaturedCard Default 1`] = `
+<div
+  className="sc-bdfBwQ fvYAMv slide"
+>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <div>
+      <img
+        alt=""
+        src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+      />
+      <span>
+        <p>
+          $ 
+          15.99
+        </p>
+      </span>
+    </div>
+  </a>
+  <div>
+    <p>
+      Mens Casual Slim Fit
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Storybook/Loader Default 1`] = `
+<div
+  className="sc-gsTCUz kpASZt"
+>
+  <div
+    className="loading-container"
+  >
+    <div
+      className="loader"
+    >
+      <div
+        className="loading-spinning-bubbles"
+      >
+        <div
+          className="bubble-container"
+        >
+          <div
+            className="bubble"
+          />
+        </div>
+        <div
+          className="bubble-container"
+        >
+          <div
+            className="bubble"
+          />
+        </div>
+        <div
+          className="bubble-container"
+        >
+          <div
+            className="bubble"
+          />
+        </div>
+        <div
+          className="bubble-container"
+        >
+          <div
+            className="bubble"
+          />
+        </div>
+        <div
+          className="bubble-container"
+        >
+          <div
+            className="bubble"
+          />
+        </div>
+        <div
+          className="bubble-container"
+        >
+          <div
+            className="bubble"
+          />
+        </div>
+        <div
+          className="bubble-container"
+        >
+          <div
+            className="bubble"
+          />
+        </div>
+        <div
+          className="bubble-container"
+        >
+          <div
+            className="bubble"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Storybook/MenuItem Detail 1`] = `
+<button
+  className="sc-dlfnbm eIIxRa"
+  onClick={[Function]}
+  selected={false}
+>
+  <svg
+    aria-hidden="true"
+    className="svg-inline--fa fa-arrow-left fa-w-14 "
+    data-icon="arrow-left"
+    data-prefix="fas"
+    focusable="false"
+    role="img"
+    style={
+      Object {
+        "marginRight": 15,
+      }
+    }
+    viewBox="0 0 448 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"
+      fill="currentColor"
+      style={Object {}}
+    />
+  </svg>
+  VOLTAR
+</button>
+`;
+
+exports[`Storyshots Storybook/MenuItem Selected 1`] = `
+<button
+  className="sc-dlfnbm eIIxRa"
+  onClick={[Function]}
+  selected={true}
+>
+  
+  Default
+</button>
+`;
+
+exports[`Storyshots Storybook/MenuItem Unselected 1`] = `
+<button
+  className="sc-dlfnbm jXdBZV"
+  onClick={[Function]}
+  selected={false}
+>
+  
+  Default
+</button>
+`;
+
+exports[`Storyshots Storybook/ProductCard Detail 1`] = `
+<div
+  className="sc-hKgILt dycGvs"
+>
+  <div
+    className="imgContainer"
+  >
+    <img
+      alt=""
+      src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+    />
+  </div>
+  <div>
+    <div>
+      <p>
+        Mens Casual Slim Fit
+      </p>
+      <div>
+        <span>
+          R$ 
+          15.99
+        </span>
+      </div>
+    </div>
+    <div>
+      <p>
+        The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Storybook/ProductCard Discover 1`] = `
+<div
+  className="sc-hKgILt ihAzyX"
+>
+  <div
+    className="imgContainer"
+  >
+    <img
+      alt=""
+      src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+    />
+  </div>
+  <div>
+    <div>
+      <p>
+        Mens Casual Slim Fit...
+      </p>
+      <div>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <span>
+            SHOP
+          </span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <p>
+        The color could be slightly different between on the screen and in practice. / Please note...
+      </p>
+    </div>
+  </div>
+</div>
+`;
