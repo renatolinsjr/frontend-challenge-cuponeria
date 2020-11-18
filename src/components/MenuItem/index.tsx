@@ -20,7 +20,7 @@ const StyledMenuItem = styled.button`
   border-radius: 50px;
   background-color: ${(props: Props) =>
     props.selected ? `#FAD424` : props.detail ? `#FAD424` : `#fff`};
-  margin: ${(props: Props) => (props.detail ? "auto" : "unset")};
+  margin: ${(props: Props) => (props.detail ? "auto auto 1rem auto" : "auto auto 1rem auto")};
 
   display: flex;
   justify-content: center;

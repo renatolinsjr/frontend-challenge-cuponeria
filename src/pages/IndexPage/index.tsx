@@ -5,11 +5,13 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "../../components/ProductCard";
 import FeaturedCard from "../../components/FeaturedCard";
 import MenuItem from "../../components/MenuItem";
+import Loader from "../../components/Loader";
 
 // styled components
 import StyledPage from "./style";
 
 function IndexPage() {
+  const [loading, setLoading] = useState(true);
   const [categories, setCategories] = useState([""]);
   const [categoryView, setCategoryView] = useState("home");
   const [products, setProducts] = useState([""]);
@@ -58,6 +60,11 @@ function IndexPage() {
         setupCategories(res);
         setProducts(res);
         randomDiscover(res);
+      })
+      .then(() => {
+        setTimeout(() => {
+          setLoading(false);
+        }, 500);
       });
   }, []);
 
@@ -257,6 +264,13 @@ function IndexPage() {
           </div>
         </div>
       </section>
+      {loading ? (
+        <section className="loader">
+          <Loader />
+        </section>
+      ) : (
+        ""
+      )}
     </StyledPage>
   );
 }

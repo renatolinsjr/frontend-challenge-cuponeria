@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 // imported components
 import ProductCard from "../../components/ProductCard";
 import MenuItem from "../../components/MenuItem";
+import Loader from "../../components/Loader";
 
 // styled components
 import StyledPage from "./style";
@@ -20,13 +21,19 @@ function IndexPage() {
     title: "default",
     image: "default",
     description: "default",
-    price: ""
+    price: "",
   });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${router.id}`)
       .then((res) => res.json())
-      .then((json) => setProduct(json));
+      .then((json) => setProduct(json))
+      .then(() => {
+        setTimeout(() => {
+          setLoading(false);
+        }, 500);
+      });
   }, []);
 
   return (
@@ -66,6 +73,13 @@ function IndexPage() {
           <ProductCard detail={true} product={product} />
         </div>
       </section>
+      {loading ? (
+        <section className="loader">
+          <Loader />
+        </section>
+      ) : (
+        ""
+      )}
     </StyledPage>
   );
 }

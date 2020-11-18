@@ -17,6 +17,10 @@ const StyledPage = styled.div`
       display: flex;
       margin: 2rem 3rem 1rem 3rem;
 
+      @media only Screen and (max-width: 900px) {
+        margin: 2rem 0 1rem 0;
+      }
+
       img {
         width: 64px;
         height: 64px;
@@ -66,6 +70,10 @@ const StyledPage = styled.div`
 
   .sectionProductCard > div > div {
     margin: 0.5rem;
+
+    @media only Screen and (max-width: 900px) {
+      margin: 0.5rem 0;
+    }
   }
 
   .sectionFeaturedCard {
@@ -133,6 +141,24 @@ const StyledPage = styled.div`
     justify-content: center;
     transition: all 1s;
     position: relative;
+  }
+
+  .loader {
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loader > .div {
+    z-index: 11;
+    position: fixed;
   }
 `;
 

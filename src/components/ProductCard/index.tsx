@@ -29,7 +29,7 @@ const StyledProductCard = styled.div`
 
     img {
       margin: ${(props: Props) => (props.detail ? "auto" : "28px 20px")};
-      max-width: ${(props: Props) => (props.detail ? "500px" : "200px")};
+      max-width: ${(props: Props) => (props.detail ? "500px" : "160px")};
       height: ${(props: Props) => (props.detail ? "346px" : "70%")};
     }
   }
@@ -72,6 +72,7 @@ const StyledProductCard = styled.div`
 
           height: 51px;
           width: 121px;
+          max-width: 80%;
           border-radius: 10px;
           background: #ee797e;
           box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.110058);
@@ -104,12 +105,18 @@ const StyledProductCard = styled.div`
 
   @media only screen and (max-width: 900px){
     height: 100%;
+    width: 100%;
     flex-direction: column;
 
     div.imgContainer{
       height: 250px;
       width: ${(props: Props) => (props.detail ? "100%" : "unset")};
       margin: ${(props: Props) => (props.detail ? "2rem auto" : "unset")};
+
+      img {
+        max-width: 80% !important;
+        max-height: 100% !important;
+      }
     }
 
     div:first-child{
@@ -171,7 +178,7 @@ const ProductCard = ({
             {detail
               ? product.description
               : product.description
-              ? product.description.substring(0, 100) + "..."
+              ? product.description.substring(0, 90) + "..."
               : ""}
           </p>
         </div>
