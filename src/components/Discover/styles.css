@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.discoverCard {
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    min-height: 215px;
+}
+.discoverCard:first-child {
+    margin-right: 20px;
+}
+.dPink {
+    background: rgba(200, 118, 118, 0.2);
+}
+.dBlue {
+    background: rgba(63, 127, 203, 0.2);
+}
+.discoverCardImg {
+    padding: 30px 15px 20px;
+}
+.discoverCardTexts {
+    padding-left: 15px;
+}
+.discoverCardTitleButtom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    margin: 15px;
+}
+.discoverCardTitle {
+    height: 50px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+    text-align: left;
+    padding-right: 10px;
+}
+.discoverCardButton {
+    width: 120px;
+    height: 50px;
+}
+.discoverCardButton a {
+    text-decoration: none;
+}
+.discoverCardButtonText {
+    background: #EE797E;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.110058);
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 15px;
+    outline: none;
+}
+.discoverCardDescription {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #A8A4A4;
+    padding-right: 27px;
+    padding-bottom: 16px;
+    text-align: left;
+    height: 85px;
+}
+
+@media screen and (max-width: 1079px) {
+    .discoverCard {
+        margin: 20px;
+    } 
+    .discoverCard, .discoverCardTitleButtom {
+        flex-direction: column;
+    }
+    .discoverCardTexts {
+        display: flex;
+        flex-direction: column;
+    }
+}

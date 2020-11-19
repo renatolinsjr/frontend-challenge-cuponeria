@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.mainHeader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000;
+  color: #FFFFFF;
+  z-index: 4;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 10px;
+}
+.containerHeader {
+  display: flex;
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 49px;
+}
+.containerHeader a {
+  text-decoration: none;
+}
+.containerLogo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.iconLogo {
+  width: 64px;
+}
+.textLogo {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-left: 20px;
+}
+
+.containerMenu {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 34px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+li.alice-carousel__stage-item.__active {
+  margin-right: 15px;
+}
+.itemMenu {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.110058);
+  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  padding: 15px 0;
+  outline: none;
+  margin-right: 15px;
+  border: none;
+  cursor: pointer;
+}
+.itemMenuActive {
+  background: #FAD424;
+}
+
+.itemMenu.itemHome {
+  max-width: 160px;
+}
+
+.buttonBack {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  background: #FAD424;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.110058);
+  border-radius: 10px;
+  padding: 15px 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 45px;
+}
+
+.Loading {
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 41px;
+  color: #000000;
+}

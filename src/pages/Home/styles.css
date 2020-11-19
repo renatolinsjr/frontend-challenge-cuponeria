@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.main {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #F2F2F2;
+    color: #000;
+}
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 50px;
+}
+.grid {
+    display: grid;
+}
+.grid-template-columns-1 {
+    grid-template-columns: 1fr;
+}
+  
+.grid-template-columns-2 {
+    grid-template-columns: 1fr 1fr;
+}
+.grid-template-columns-5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+.discoverTitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.featuredTitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 32px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 25px;
+    margin-top: 23px;
+}
+
+@media screen and (max-width: 1079px) {
+    .grid-template-columns-2 {
+        grid-template-columns: 1fr;
+    }
+    .grid-template-columns-5 {
+        grid-template-columns: 1fr;
+    }
+    
+}
