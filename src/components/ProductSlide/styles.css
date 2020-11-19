@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.mainProduct {
+    width: 1180px;
+}
+.containerProduct {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.containerProduct:last-child {
+    margin-right: 0;
+}
+.mainProduct li.alice-carousel__stage-item.__active {
+    max-width: 224px !important;
+    width: 100% !important;
+}
+.productImage {
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    min-height: 234px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productImage img {
+    max-width: 190px;
+    max-height: 234px;
+    height: auto;
+}
+.productTitle {
+    padding: 15px;
+    background: #111111;
+    border-radius: 0px 0px 10px 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.productTitle h3 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 100%;
+}
+.productPrice {
+    position: absolute;
+    right: 25px;
+    bottom: 60px;
+    padding: 10px;
+    background: #FF0000;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.110058);
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.itemProduct {
+    outline: none;
+}
+
+@media screen and (min-width: 1180px) {
+    .alice-carousel__wrapper {
+        padding-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .mainProduct {
+        width: 90%;
+        margin: auto;
+    }
+    .discoverCardDescription {
+        display: none;
+    }
+}

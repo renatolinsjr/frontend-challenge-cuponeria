@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.containerHeaderProduct {
+    flex-direction: row;
+}
+.containerMenuProduct {
+    max-width: 200px;
+}
+
+.mainPageProduct {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+.containerPageProduct {
+    width: 100%;
+    max-width: 1180px;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 50px;
+}
+.grid {
+    display: grid;
+}
+.grid-template-columns-1 {
+    grid-template-columns: 1fr;
+}
+  
+.grid-template-columns-2 {
+    grid-template-columns: 1fr 1fr;
+}
+.grid-template-columns-5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+.pageProductTitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.contentProduct {
+    display: flex;
+    background: rgba(63, 127, 203, 0.2);
+    border-radius: 10px;
+}
+.detailContainerProduct {
+    width: 100%;
+    display: flex;
+}
+.detailProductImage {
+    background: #FFF;
+    padding: 15px;
+    margin: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+.detailProductTexts {
+    padding: 25px;
+}
+.detailProductTitle h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+}
+.detailProductPrice {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 35px;
+    color: #000000;
+}
+p.detailProductDescription {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #4a4a4a;
+    margin-top: 30px;
+    line-height: 20px;
+}
+p.detailProductCategory {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    color: #000;
+}
+button.detailProductButton {
+    border: none;
+    background: #619CEB;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.110058);
+    border-radius: 10px;
+    padding: 20px 40px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1079px) {
+    .grid-template-columns-2 {
+        grid-template-columns: 1fr;
+    }
+    .grid-template-columns-5 {
+        grid-template-columns: 1fr;
+    }
+    .contentProduct {
+        margin: 15px;
+    }
+    .detailContainerProduct {
+        flex-direction: column;
+    }
+    .detailProductTitle, .detailProductPrice, 
+    .detailProductDescription, .detailProductCategory {
+        text-align: center;
+    }
+    .detailProductButton {
+        display: flex;
+        margin: auto;
+    }
+    
+}
