@@ -18,7 +18,9 @@ yarn
 yarn start
 ```
 
-![](https://media.giphy.com/media/Svb5NmVYtyYTHrhWov/giphy.gif)
+## Demo
+
+![](./src/assets/demo.gif)
 
 <h5 align="center">
   ☕ Code and Coffee
